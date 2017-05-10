@@ -1,0 +1,12 @@
+<?php
+	$meigee_helper = $this->helper('\Meigee\Underlinen\Helper\UnderlinenGeneral');
+	$contentWidth = $meigee_helper->getCustomThemeOptionCnf('underlinen_layout', 'container_width');
+	$sticky_opacity = $meigee_helper->getCustomThemeOptionCnf('underlinen_header', 'sticky_header_opacity');
+?>
+<link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet">
+<style type="text/css">
+	body.boxed-layout .container,
+	body .container {max-width: <?php echo $contentWidth; ?>px; width: 100%;}
+	#sticky-header {opacity: <?php echo $sticky_opacity/100; ?>;}
+</style>
